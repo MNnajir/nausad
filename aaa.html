@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+#range{
+`	position:fixed;
+	bottom:0;
+	left:54%;
+}
+#fixed-box{
+	width:250px;
+`	height:80px;
+	background:red;
+	position:fixed;
+	bottom:0;
+	left:50%;
+}
+#showtext{
+	text-align:center;
+	color:white;
+	font-weight:bold;
+	font-size:18px;
+}
+</style>
+<script>
+function demo()
+{
+	var x = document.getElementById("range").value;
+	var y = document.getElementById("result");
+	y.style.fontsize=x;
+	var z = document.getElementById("showtext");
+	z.innerHTML= "your font size is now = "+x+" px";
+}
+</script>
+</head>
+<body>
+<h1 id="result"> ABDUL NAJIR ANSARI</h1>
+<div id="fixed-box">
+<p id=showtext"></p>
+<input id="range" type="range" min="0" max="1000" oninput="demo()">
+</div>
+</body>
+</html>
